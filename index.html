@@ -152,13 +152,13 @@
                                 } else {
                                     color = stringToColour(r.route_long_name);
                                 }
-                                layer = layers[r.route_type];
+                                layer = layers[r.route_short_name];
                             }
                         }
                         if (markers[id]) {
                             var marker = markers[id];
                             marker.setLatLng([v.position.latitude, v.position.longitude]);
-                        } else {
+                        } else { // use icon instead? https://leafletjs.com/reference-1.3.0.html#icon
                             if (shape == "square"){
                                 var marker = L.circleMarker([v.position.latitude, v.position.longitude], { radius: 3, color: color, weight: 1 }).addTo(layer);
                             } else if (shape == "triangle") {
