@@ -134,13 +134,14 @@
                     for (var i in data.response.entity) {
                         var id = data.response.entity[i].id;
                         var v = data.response.entity[i].vehicle;
-                        var desc = "<b>" + v.vehicle.label + "</b><br>";
+                        var desc = ""; //"<b>" + v.vehicle.label + "</b><br>";
                         var color = "black";
                         var layer = layers[null];
                         if (v.trip) {
                             var r = routes[v.trip.route_id];
                             if (r) {
-                                desc += r.route_short_name + ":" + r.route_long_name;
+                                desc += "<b>" + r.route_short_name + "</b><br>" + r.route_long_name+ "<br>";
+                                // 4 = ferry; 3 = bus; 2 = train;
                                 if (r.route_type == 4) {
                                     color = "blue";
                                 } else {
