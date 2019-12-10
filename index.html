@@ -160,11 +160,11 @@
                             marker.setLatLng([v.position.latitude, v.position.longitude]);
                         } else {
                             if (shape == "square"){
-                                var marker = L.circleMarker([v.position.latitude, v.position.longitude], { radius: 3, color: color, weight: 1 }).addTo(layer);
+                                var marker = L.circleMarker([v.position.latitude, v.position.longitude], { radius: 2, color: color, weight: 1 }).addTo(layer);
                             } else if (shape == "triangle") {
-                                var marker = L.circleMarker([v.position.latitude, v.position.longitude], { opacity: .5, radius: 1, color: color }).addTo(layer);
+                                var marker = L.circleMarker([v.position.latitude, v.position.longitude], { opacity: .5, radius: 2, color: color, weight: 1 }).addTo(layer);
                             } else {
-                                var marker = L.circleMarker([v.position.latitude, v.position.longitude], { radius: 2, color: color }).addTo(layer);
+                                var marker = L.circleMarker([v.position.latitude, v.position.longitude], { radius: 3, color: color }).addTo(layer);
                             }
                             markers[id] = marker
                         }
