@@ -160,7 +160,7 @@
                             marker.setLatLng([v.position.latitude, v.position.longitude]);
                         } else {
                             if (shape == "square"){
-                                var marker = L.rectangle([v.position.latitude, v.position.longitude], { color: color, weight: 1 }).addTo(layer);
+                                var marker = L.rectangle([[v.position.latitude, v.position.longitude],[v.position.latitude+1, v.position.longitude+1]], { color: color, weight: 1 }).addTo(layer);
                             } else {
                                 var marker = L.circleMarker([v.position.latitude, v.position.longitude], { radius: 2, color: color }).addTo(layer);
                             }
